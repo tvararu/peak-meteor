@@ -1,5 +1,3 @@
-var webpack = require('webpack');
-
 module.exports = {
   entry: './entry',
   module: {
@@ -10,4 +8,4 @@ module.exports = {
       { test: /\.(svg|ttf|woff|eot)(\?.*)?$/, loader: 'file' }
     ]
   }
-};
+}
