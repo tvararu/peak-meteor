@@ -1,5 +1,3 @@
-injectTapEventPlugin()
-
 import './routes'
 
 Accounts.ui.config({

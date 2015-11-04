@@ -1,3 +1,4 @@
+injectTapEventPlugin()
 import { Route, IndexRoute } from 'react-router'
 
 import Root from './handlers/Root'
