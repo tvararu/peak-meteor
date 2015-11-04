@@ -2,7 +2,6 @@ var path = require('path')
 
 module.exports = {
   externals: {
-    // Make sure we use Meteor package for react and react-router
     'react': 'React',
     'react-router': 'ReactRouter',
     'react-dom': 'ReactDOM',
@@ -16,7 +15,7 @@ module.exports = {
     'material-ui': 'MUI'
   },
   devServer: {
-    // You can change this to your server IP address to access it remotely
+    // You can change this to your server IP address to access it remotely.
     host: 'localhost'
   },
   resolve: {
