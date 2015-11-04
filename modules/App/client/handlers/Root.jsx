@@ -19,6 +19,8 @@ export default class Root extends Component {
   }
 
   render () {
-    return <AppCanvas>{ this.props.children }</AppCanvas>
+    return <AppCanvas>
+      { this.props.children }
+    </AppCanvas>
   }
 }
