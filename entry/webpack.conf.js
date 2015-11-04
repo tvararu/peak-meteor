@@ -10,7 +10,9 @@ module.exports = {
     'react-addons-create-fragment': 'React.addons.createFragment',
     'react-addons-pure-render-mixin': 'React.addons.PureRenderMixin',
     'react-addons-update': 'React.addons.update',
-    'react-addons-linked-state-mixin': 'React.addons.LinkedStateMixin'
+    'react-addons-linked-state-mixin': 'React.addons.LinkedStateMixin',
+    'underscore': '_',
+    'lodash': '_'
   },
   devServer: {
     // You can change this to your server IP address to access it remotely

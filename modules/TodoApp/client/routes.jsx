@@ -4,7 +4,7 @@ import TodoApp from './TodoApp';
 import TodoMain from './TodoMain';
 
 export default (
-  <Route path="/" component={TodoApp}>
+  <Route path='/' component={TodoApp}>
     <IndexRoute component={TodoMain} />
   </Route>
 );

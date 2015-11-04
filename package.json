@@ -1,5 +1,6 @@
 {
   "standard": {
-    "globals": ["ReactRouterSSR", "Meteor", "WebpackStats", "Accounts"]
+    "globals": ["React", "ReactRouterSSR", "Meteor", "WebpackStats", "Accounts"],
+    "parser": "babel-eslint"
   }
 }
