@@ -1,6 +1,13 @@
 {
   "standard": {
-    "globals": ["React", "ReactRouterSSR", "Meteor", "WebpackStats", "Accounts"],
+    "globals": [
+      "Accounts",
+      "Meteor",
+      "Mongo",
+      "React",
+      "ReactRouterSSR",
+      "WebpackStats"
+    ],
     "parser": "babel-eslint"
   }
 }
