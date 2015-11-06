@@ -2,11 +2,12 @@ import { Component } from 'react'
 import colors from 'lib/colors'
 import Radium from 'radium'
 
+const LoginButtons = BlazeToReact('loginButtons')
+
 @Radium
 class HeroHeader extends Component {
   getStyles () {
     return [{
-      color: colors.grey50,
       fontSize: '100px',
       fontWeight: '300'
     }]
@@ -25,6 +26,7 @@ export default class Home extends Component {
     return [{
       alignItems: 'center',
       backgroundColor: colors.indigo500,
+      color: colors.grey50,
       height: '100%',
       display: 'flex',
       justifyContent: 'center'
@@ -33,7 +35,10 @@ export default class Home extends Component {
 
   render () {
     return <div style={ this.getStyles() }>
-      <HeroHeader />
+      <div>
+        <HeroHeader />
+        <LoginButtons />
+      </div>
     </div>
   }
 }

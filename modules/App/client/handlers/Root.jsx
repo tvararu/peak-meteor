@@ -1,5 +1,5 @@
 import { Component, PropTypes } from 'react'
-import { AppCanvas, Styles } from 'material-ui'
+import { AppCanvas, AppBar, Styles } from 'material-ui'
 const { ThemeManager, LightRawTheme } = Styles
 
 import StyleReset from 'components/StyleReset'
@@ -22,6 +22,10 @@ export default class Root extends Component {
   render () {
     return <AppCanvas>
       <StyleReset />
+      <AppBar
+        showMenuIconButton={ false }
+        title='PEAK'
+      />
       { this.props.children }
     </AppCanvas>
   }

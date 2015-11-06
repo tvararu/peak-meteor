@@ -2,6 +2,7 @@
   "standard": {
     "globals": [
       "Accounts",
+      "BlazeToReact",
       "injectTapEventPlugin",
       "Meteor",
       "Mongo",
