@@ -1,17 +1,20 @@
 import { Component } from 'react'
+import colors from 'lib/colors'
 import Radium from 'radium'
 
 @Radium
 class HeroHeader extends Component {
   getStyles () {
     return [{
-      fontWeight: 'bold'
+      color: colors.grey50,
+      fontSize: '100px',
+      fontWeight: '300'
     }]
   }
 
   render () {
     return <div style={ this.getStyles() }>
-      PEAK
+      P E A K
     </div>
   }
 }
@@ -20,7 +23,11 @@ class HeroHeader extends Component {
 export default class Home extends Component {
   getStyles () {
     return [{
-      color: 'blue'
+      alignItems: 'center',
+      backgroundColor: colors.indigo500,
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center'
     }]
   }
 
