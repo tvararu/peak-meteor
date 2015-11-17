@@ -4,6 +4,8 @@ const { ThemeManager, LightRawTheme } = Styles
 
 import StyleReset from 'components/StyleReset'
 
+const APPBAR_HEIGHT = 64
+
 export default class Root extends Component {
   static propTypes = {
     children: PropTypes.element
@@ -26,7 +28,9 @@ export default class Root extends Component {
         showMenuIconButton={ false }
         title='PEAK'
       />
-      { this.props.children }
+      <div style={{ paddingTop: `${APPBAR_HEIGHT}px` }}>
+        { this.props.children }
+      </div>
     </AppCanvas>
   }
 }
