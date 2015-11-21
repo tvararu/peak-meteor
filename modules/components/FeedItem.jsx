@@ -5,7 +5,7 @@ import {
   Card,
   CardHeader,
   CardText
-} from 'material-ui'
+} from 'mui'
 
 @Radium
 export default class FeedItem extends Component {

@@ -12,7 +12,8 @@ module.exports = {
     'react-addons-linked-state-mixin': 'React.addons.LinkedStateMixin',
     'underscore': '_',
     'lodash': '_',
-    'material-ui': 'MUI'
+    'material-ui': 'MUI',
+    'mui': 'MUI'
   },
   devServer: {
     // You can change this to your server IP address to access it remotely.

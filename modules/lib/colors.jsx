@@ -1,4 +1,4 @@
-import { Styles } from 'material-ui'
+import { Styles } from 'mui'
 const { Colors } = Styles
 
 export default Colors

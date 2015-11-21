@@ -1,5 +1,5 @@
 import { Component, PropTypes } from 'react'
-import { AppCanvas, AppBar, Styles } from 'material-ui'
+import { AppCanvas, AppBar, Styles } from 'mui'
 const { ThemeManager, LightRawTheme } = Styles
 
 import StyleReset from 'components/StyleReset'
