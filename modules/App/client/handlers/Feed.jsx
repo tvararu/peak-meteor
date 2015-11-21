@@ -20,8 +20,8 @@ export default class Feed extends Component {
         <Composer />
       </div>
       <div>
-        { feedItems.map(n => <div style={{ marginBottom: '10px' }}>
-            <FeedItem key={ n } />
+        { feedItems.map(n => <div key={ n } style={{ marginBottom: '10px' }}>
+            <FeedItem />
           </div>)
         }
       </div>
