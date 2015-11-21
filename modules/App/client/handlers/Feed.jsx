@@ -1,39 +1,7 @@
 import { Component } from 'react'
 import _ from 'lodash'
 import Radium from 'radium'
-
-import {
-  Avatar,
-  Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardText,
-  CardTitle,
-  FlatButton
-} from 'material-ui'
-
-@Radium
-class FeedItem extends Component {
-  getStyles () {
-    return {
-      marginBottom: '10px'
-    }
-  }
-
-  render () {
-    return <Card style={ this.getStyles() }>
-      <CardHeader
-        avatar={ <Avatar>A</Avatar> }
-        subtitle='Subtitle'
-        title='Title'
-      />
-      <CardText>
-        Lorem ipsum.
-      </CardText>
-    </Card>
-  }
-}
+import FeedItem from 'components/FeedItem'
 
 @Radium
 export default class Feed extends Component {
