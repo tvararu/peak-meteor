@@ -26,3 +26,5 @@ accounts-ui
 accounts-password
 izzilab:material-ui
 johnantoni:meteor-normalize
+check
+jparker:gravatar

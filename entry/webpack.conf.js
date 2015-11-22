@@ -2,6 +2,7 @@ var path = require('path')
 
 module.exports = {
   externals: {
+    'gravatar': 'Gravatar',
     'react': 'React',
     'react-router': 'ReactRouter',
     'react-dom': 'ReactDOM',

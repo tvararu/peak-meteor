@@ -3,10 +3,12 @@
     "globals": [
       "Accounts",
       "BlazeToReact",
+      "check",
       "injectTapEventPlugin",
       "Meteor",
       "Mongo",
       "React",
+      "ReactMeteorData",
       "ReactRouterSSR",
       "WebpackStats"
     ],

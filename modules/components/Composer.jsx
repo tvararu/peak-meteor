@@ -27,7 +27,7 @@ export default class Composer extends Component {
   }
 
   submitPost () {
-    console.log(this.state.content)
+    Meteor.call('addPost', this.state.content)
     this.setState({ content: '' })
     this.refs.textField.blur()
   }
