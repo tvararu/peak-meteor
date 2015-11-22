@@ -1,12 +1,15 @@
 import { Component } from 'react'
-import PropTypes from 'lib/PropTypes'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
+import reactMixin from 'react-mixin'
 import gravatar from 'gravatar'
+import PropTypes from 'lib/PropTypes'
 import {
   Card,
   CardHeader,
   CardText
 } from 'mui'
 
+@reactMixin.decorate(PureRenderMixin)
 export default class FeedItem extends Component {
   static propTypes = {
     author: PropTypes.pk.user.isRequired,
