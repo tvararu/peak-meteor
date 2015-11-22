@@ -10,6 +10,7 @@ import { Posts } from 'App/lib/collections'
 export default class Feed extends Component {
   getMeteorData () {
     Meteor.subscribe('posts')
+    Meteor.subscribe('users')
 
     return {
       posts: Posts.find({}, { sort: { createdAt: -1 } }).fetch(),
