@@ -27,7 +27,7 @@ export default class FeedItem extends Component {
         subtitle={ this.props.createdAt.toLocaleString() }
         title={ email }
       />
-      <CardText>
+      <CardText className={ 'sup' }>
         { this.props.text }
       </CardText>
     </Card>
