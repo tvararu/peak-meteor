@@ -7,7 +7,6 @@
       "injectTapEventPlugin",
       "Meteor",
       "Mongo",
-      "React",
       "ReactMeteorData",
       "ReactRouterSSR",
       "WebpackStats"

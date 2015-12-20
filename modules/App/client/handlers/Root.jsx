@@ -1,5 +1,6 @@
-import { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { AppCanvas, AppBar, Styles } from 'mui'
+import PropTypes from 'lib/PropTypes'
 const { ThemeManager, LightRawTheme } = Styles
 
 import StyleReset from 'components/StyleReset'

@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import colors from 'lib/colors'
 import Radium from 'radium'
 

@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { Style } from 'radium'
 
 export default class StyleReset extends Component {

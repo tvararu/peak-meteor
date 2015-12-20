@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import Radium from 'radium'
 import LinkedStateMixin from 'react-addons-linked-state-mixin'
 import reactMixin from 'react-mixin'

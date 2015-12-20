@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import reactMixin from 'react-mixin'
 import gravatar from 'gravatar'
