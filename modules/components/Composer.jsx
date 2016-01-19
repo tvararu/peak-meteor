@@ -14,7 +14,7 @@ import {
 export default class Composer extends Component {
   state = {
     content: ''
-  }
+  };
 
   canSubmitPost () {
     return this.state.content.length !== 0

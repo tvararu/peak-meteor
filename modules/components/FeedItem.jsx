@@ -15,7 +15,7 @@ export default class FeedItem extends Component {
     author: PropTypes.pk.user.isRequired,
     createdAt: PropTypes.instanceOf(Date).isRequired,
     text: PropTypes.string.isRequired
-  }
+  };
 
   render () {
     const email = this.props.author.emails[0].address

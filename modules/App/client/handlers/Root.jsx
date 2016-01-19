@@ -10,11 +10,11 @@ const APPBAR_HEIGHT = 64
 export default class Root extends Component {
   static propTypes = {
     children: PropTypes.element
-  }
+  };
 
   static childContextTypes = {
     muiTheme: PropTypes.object
-  }
+  };
 
   getChildContext () {
     return {
