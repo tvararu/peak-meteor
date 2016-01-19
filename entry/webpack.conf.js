@@ -11,8 +11,6 @@ module.exports = {
     'react-addons-pure-render-mixin': 'React.addons.PureRenderMixin',
     'react-addons-update': 'React.addons.update',
     'react-addons-linked-state-mixin': 'React.addons.LinkedStateMixin',
-    'underscore': '_',
-    'lodash': '_',
     'material-ui': 'MUI',
     'mui': 'MUI'
   },
