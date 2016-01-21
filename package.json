@@ -11,6 +11,9 @@
       "ReactRouterSSR",
       "WebpackStats"
     ],
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "/interfaces/"
+    ]
   }
 }
