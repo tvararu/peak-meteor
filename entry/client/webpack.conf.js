@@ -1,7 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var babelSettings = { presets: ['react', 'es2015', 'stage-0'] }
-babelSettings.plugins = ['transform-decorators-legacy', 'babel-plugin-lodash']
+babelSettings.plugins = ['transform-flow-strip-types', 'babel-plugin-lodash']
 
 var cssLoader
 var plugins = []
