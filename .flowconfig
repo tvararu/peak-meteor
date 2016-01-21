@@ -1,0 +1,8 @@
+[ignore]
+.*/\.meteor/.*
+
+[include]
+
+[libs]
+
+[options]

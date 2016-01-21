@@ -1,3 +1,4 @@
+// @flow
 import { PropTypes as ReactPropTypes } from 'react'
 
 let PropTypes = Object.create(ReactPropTypes)
