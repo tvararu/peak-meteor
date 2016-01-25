@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react'
 import shouldPureComponentUpdate from 'react-pure-render'
 import gravatar from 'gravatar'

@@ -2,7 +2,7 @@ var localIdentName = process.env.NODE_ENV === 'production'
   ? '[hash:base64:5]'
   : '[name]__[local]__[hash:base64:5]'
 var babelSettings = { presets: ['react', 'es2015', 'stage-0'] }
-babelSettings.plugins = ['transform-flow-strip-types', 'babel-plugin-lodash']
+babelSettings.plugins = ['babel-plugin-lodash']
 
 module.exports = {
   entry: './entry',
