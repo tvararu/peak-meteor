@@ -6,7 +6,7 @@ import {
   Card,
   CardHeader,
   CardText
-} from 'mui'
+} from 'material-ui'
 
 export default class FeedItem extends Component {
   static propTypes = {

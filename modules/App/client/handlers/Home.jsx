@@ -1,27 +1,11 @@
 import React, { Component } from 'react'
 import colors from 'lib/colors'
 import Radium from 'radium'
+import HeroHeader from 'components/HeroHeader'
 
 const LoginButtons = BlazeToReact('loginButtons')
 
-@Radium
-class HeroHeader extends Component {
-  getStyles () {
-    return [{
-      fontSize: '100px',
-      fontWeight: '300'
-    }]
-  }
-
-  render () {
-    return <div style={ this.getStyles() }>
-      P E A K
-    </div>
-  }
-}
-
-@Radium
-export default class Home extends Component {
+class Home extends Component {
   getStyles () {
     return [{
       alignItems: 'center',
@@ -42,3 +26,5 @@ export default class Home extends Component {
     </div>
   }
 }
+
+export default Radium(Home)

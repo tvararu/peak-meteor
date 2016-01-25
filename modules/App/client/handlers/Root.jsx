@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppCanvas, AppBar, Styles } from 'mui'
+import { AppCanvas, AppBar, Styles } from 'material-ui'
 import PropTypes from 'lib/PropTypes'
 const { ThemeManager, LightRawTheme } = Styles
 

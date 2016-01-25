@@ -2,13 +2,10 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
-import reactMixin from 'react-mixin'
 import { TransitionMotion, spring } from 'react-motion'
 import { Posts } from 'App/lib/collections'
 
-@Radium
-@reactMixin.decorate(ReactMeteorData)
-export default class Feed extends Component {
+class Feed extends Component {
   getMeteorData () {
     Meteor.subscribe('posts')
     Meteor.subscribe('users')
@@ -105,3 +102,5 @@ export default class Feed extends Component {
     </div>
   }
 }
+
+export default Radium(Feed)

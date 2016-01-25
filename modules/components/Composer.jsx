@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
-import LinkedStateMixin from 'react-addons-linked-state-mixin'
-import reactMixin from 'react-mixin'
 import {
   Card,
   CardText,
   RaisedButton,
   TextField
-} from 'mui'
+} from 'material-ui'
 
-@Radium
-@reactMixin.decorate(LinkedStateMixin)
-export default class Composer extends Component {
+class Composer extends Component {
   state = {
     content: ''
   };
@@ -26,6 +22,10 @@ export default class Composer extends Component {
     }
   }
 
+  handleChange (content) {
+    this.setState({content})
+  }
+
   submitPost () {
     Meteor.call('addPost', this.state.content)
     this.setState({ content: '' })
@@ -33,6 +33,11 @@ export default class Composer extends Component {
   }
 
   render () {
+    var valueLink = {
+      value: this.state.content,
+      requestChange: this.handleChange
+    }
+
     return <Card style={{ paddingBottom: '16px' }}>
       <CardText style={{ clear: 'both' }}>
         <TextField
@@ -43,7 +48,7 @@ export default class Composer extends Component {
           ref={ 'textField' }
           rows={ 2 }
           style={{ width: '100%' }}
-          valueLink={ this.linkState('content') }
+          valueLink={ valueLink }
         />
         <RaisedButton
           disabled={ !this.canSubmitPost() }
@@ -56,3 +61,5 @@ export default class Composer extends Component {
     </Card>
   }
 }
+
+export default Radium(Composer)

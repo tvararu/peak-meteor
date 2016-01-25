@@ -7,13 +7,9 @@
       "injectTapEventPlugin",
       "Meteor",
       "Mongo",
-      "ReactMeteorData",
       "ReactRouterSSR",
       "WebpackStats"
     ],
-    "parser": "babel-eslint",
-    "ignore": [
-      "/interfaces/"
-    ]
+    "parser": "babel-eslint"
   }
 }
