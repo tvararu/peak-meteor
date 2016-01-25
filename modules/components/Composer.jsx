@@ -43,7 +43,7 @@ class Composer extends Component {
         <TextField
           floatingLabelText='Write a new post.'
           hintStyle={{ top: '13px' }}
-          multiLine={ true }
+          multiLine
           onEnterKeyDown={ this.handleEnterKey.bind(this) }
           ref={ 'textField' }
           rows={ 2 }
@@ -54,7 +54,7 @@ class Composer extends Component {
           disabled={ !this.canSubmitPost() }
           label='Post'
           onClick={ this.submitPost.bind(this) }
-          primary={ true }
+          primary
           style={{ float: 'right' }}
         />
       </CardText>
