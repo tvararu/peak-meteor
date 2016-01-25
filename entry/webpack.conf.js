@@ -23,7 +23,7 @@ module.exports = {
     reload: true
   },
   resolve: {
-    root: path.join(__dirname, '..', 'modules'),
-    extensions: ['', '.js', '.jsx', '.json', '.css', '.scss']
+    root: path.join(__dirname, '..', 'src'),
+    extensions: ['', '.js', '.jsx', '.json']
   }
 }

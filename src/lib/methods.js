@@ -1,6 +1,6 @@
 import Meteor from 'meteor'
 import check from 'meteor/check'
-import { Posts } from 'App/lib/collections'
+import { Posts } from 'lib/collections'
 
 Meteor.methods({
   addPost (text) {

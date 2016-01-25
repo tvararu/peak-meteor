@@ -1,5 +1,5 @@
 import Accounts from 'meteor/Accounts'
-import 'App/lib/methods'
+import 'lib/methods'
 import './routes'
 
 Accounts.ui.config({

@@ -1,7 +1,7 @@
 import ReactRouterSSR from 'meteor/ReactRouterSSR'
 import WebpackStats from 'meteor/WebpackStats'
-import 'App/lib/methods'
-import 'App/server/publications'
+import 'lib/methods'
+import 'server/publications'
 
 // Do server-rendering only in production mode
 if (process.env.NODE_ENV === 'production') {

@@ -4,7 +4,7 @@ import Radium from 'radium'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
 import { TransitionMotion, spring } from 'react-motion'
-import { Posts } from 'App/lib/collections'
+import { Posts } from 'lib/collections'
 
 class Feed extends Component {
   getMeteorData () {

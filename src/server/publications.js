@@ -1,5 +1,5 @@
 import Meteor from 'meteor'
-import { Posts } from 'App/lib/collections'
+import { Posts } from 'lib/collections'
 
 Meteor.publish('posts', () =>
   Posts.find({}, { sort: { createdAt: -1 } })
