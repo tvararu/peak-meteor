@@ -1,3 +1,4 @@
+import BlazeToReact from 'meteor/BlazeToReact'
 import React, { Component } from 'react'
 import colors from 'lib/colors'
 import Radium from 'radium'

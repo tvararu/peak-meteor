@@ -1,3 +1,5 @@
+import ReactRouterSSR from 'meteor/ReactRouterSSR'
+import WebpackStats from 'meteor/WebpackStats'
 import 'App/lib/methods'
 import 'App/server/publications'
 

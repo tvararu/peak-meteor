@@ -1,3 +1,4 @@
+import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'

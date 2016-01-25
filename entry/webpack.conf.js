@@ -3,10 +3,17 @@ var path = require('path')
 module.exports = {
   externals: {
     'gravatar': 'Gravatar',
-    'react': 'React',
-    'react-router': 'ReactRouter',
+    'material-ui': 'MUI',
+    'meteor/Accounts': 'Accounts',
+    'meteor/BlazeToReact': 'BlazeToReact',
+    'meteor/check': 'check',
+    'meteor/ReactRouterSSR': 'ReactRouterSSR',
+    'meteor/WebpackStats': 'WebpackStats',
+    'meteor': 'Meteor',
     'react-dom': 'ReactDOM',
-    'material-ui': 'MUI'
+    'react-router': 'ReactRouter',
+    'react-tap-event-plugin': 'injectTapEventPlugin',
+    'react': 'React'
   },
   devServer: {
     // You can change this to your server IP address to access it remotely.

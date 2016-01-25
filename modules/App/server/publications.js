@@ -1,3 +1,4 @@
+import Meteor from 'meteor'
 import { Posts } from 'App/lib/collections'
 
 Meteor.publish('posts', () =>

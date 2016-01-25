@@ -1,3 +1,4 @@
+import Accounts from 'meteor/Accounts'
 import 'App/lib/methods'
 import './routes'
 

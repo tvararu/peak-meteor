@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Meteor from 'meteor'
 import Radium from 'radium'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'

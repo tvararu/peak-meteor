@@ -1,15 +1,5 @@
 {
   "standard": {
-    "globals": [
-      "Accounts",
-      "BlazeToReact",
-      "check",
-      "injectTapEventPlugin",
-      "Meteor",
-      "Mongo",
-      "ReactRouterSSR",
-      "WebpackStats"
-    ],
     "parser": "babel-eslint"
   }
 }
