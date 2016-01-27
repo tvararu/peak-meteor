@@ -1,8 +1,10 @@
-import { createStore, compose } from 'redux'
+import { applyMiddleware, createStore, compose } from 'redux'
+import createLogger from 'redux-logger'
 import rootReducer from 'reducers'
 import DevTools from 'handlers/DevTools'
 
 const finalCreateStore = compose(
+  applyMiddleware(createLogger()),
   DevTools.instrument()
 )(createStore)
 

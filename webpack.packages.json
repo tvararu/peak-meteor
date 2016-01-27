@@ -25,6 +25,7 @@
   "redux-devtools": "^3.0.1",
   "redux-devtools-dock-monitor": "^1.0.1",
   "redux-devtools-log-monitor": "^1.0.2",
+  "redux-logger": "^2.4.0",
   "style-loader": "^0.13.0",
   "url-loader": "^0.5.7"
 }
