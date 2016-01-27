@@ -1,7 +1,6 @@
 import Meteor from 'meteor'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { connectToMeteor } from 'meteoredux'
 import { AppCanvas, AppBar, Styles } from 'material-ui'
 import DevTools from 'handlers/DevTools'
 import PropTypes from 'lib/PropTypes'
@@ -23,11 +22,9 @@ export default class Root extends React.Component {
   };
 
   constructor (props) {
+    super(props)
     Meteor.subscribe('posts')
     Meteor.subscribe('users')
-
-    super(props)
-    connectToMeteor(store)
   }
 
   getChildContext () {
