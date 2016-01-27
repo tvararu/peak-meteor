@@ -13,11 +13,6 @@ const APPBAR_HEIGHT = 64
 
 const store = configureStore()
 
-Meteor.subscribe('posts')
-Meteor.subscribe('users')
-
-connectToMeteor(store)
-
 export default class Root extends React.Component {
   static propTypes = {
     children: PropTypes.element
@@ -26,6 +21,14 @@ export default class Root extends React.Component {
   static childContextTypes = {
     muiTheme: PropTypes.object
   };
+
+  constructor (props) {
+    Meteor.subscribe('posts')
+    Meteor.subscribe('users')
+
+    super(props)
+    connectToMeteor(store)
+  }
 
   getChildContext () {
     return {
