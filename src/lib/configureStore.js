@@ -1,13 +1,21 @@
-import Meteor from 'meteor'
-import { createStore } from 'redux'
-import { connectToMeteor } from 'meteoredux'
-import reducers from 'reducers'
+import { createStore, compose } from 'redux'
+import rootReducer from 'reducers'
+import DevTools from 'handlers/DevTools'
 
-const store = createStore(reducers)
+const finalCreateStore = compose(
+  DevTools.instrument()
+)(createStore)
 
-Meteor.subscribe('posts')
-Meteor.subscribe('users')
+const configureStore = initialState => {
+  const store = finalCreateStore(rootReducer, initialState)
 
-connectToMeteor(store)
+  if (module.hot) {
+    module.hot.accept('reducers', () =>
+      store.replaceReducer(require('reducers'))
+    )
+  }
 
-export default store
+  return store
+}
+
+export default configureStore
