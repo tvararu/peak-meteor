@@ -1,20 +1,29 @@
 import React, { Component } from 'react'
-import Meteor from 'meteor'
 import Radium from 'radium'
+import { connect } from 'react-redux'
+import { TransitionMotion, spring } from 'react-motion'
+import _ from 'lodash'
+import PropTypes from 'lib/PropTypes'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
-import { TransitionMotion, spring } from 'react-motion'
-import { Posts } from 'lib/collections'
 
 class Feed extends Component {
-  getMeteorData () {
-    Meteor.subscribe('posts')
-    Meteor.subscribe('users')
+  static propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.object),
+    users: PropTypes.arrayOf(PropTypes.object)
+  };
 
-    return {
-      posts: Posts.find({}, { sort: { createdAt: -1 } }).fetch(),
-      users: Meteor.users.find().fetch()
-    }
+  constructor (props) {
+    super(props)
+
+    _.bindAll(this, [
+      'getStyles',
+      'getMotionStyles',
+      'willEnter',
+      'willLeave',
+      'renderPost',
+      'renderFeed'
+    ])
   }
 
   getStyles () {
@@ -24,7 +33,7 @@ class Feed extends Component {
   }
 
   getMotionStyles () {
-    return this.data.posts.reduce((acc, post, idx) => {
+    return this.props.posts.reduce((acc, post, idx) => {
       acc[post._id] = {
         opacity: spring(1),
         translateY: spring(idx * 130),
@@ -38,7 +47,7 @@ class Feed extends Component {
     return {
       opacity: spring(0),
       translateY: spring(0),
-      data: this.data.posts.filter(post => post._id === id)[0]
+      data: this.props.posts.filter(post => post._id === id)[0]
     }
   }
 
@@ -51,7 +60,7 @@ class Feed extends Component {
   }
 
   renderPost (post) {
-    const author = this.data.users.filter(user => user._id === post.userId)[0]
+    const author = this.props.users.filter(user => user._id === post.userId)[0]
     return <FeedItem
       author={ author }
       createdAt={ post.createdAt }
@@ -104,4 +113,14 @@ class Feed extends Component {
   }
 }
 
-export default Radium(Feed)
+const mapStateToProps = state => ({
+  posts: state.posts,
+  users: state.users
+})
+
+const mapDispatchToProps = {}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Radium(Feed))
