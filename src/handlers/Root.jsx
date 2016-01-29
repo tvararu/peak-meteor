@@ -27,6 +27,13 @@ export default class Root extends React.Component {
     Meteor.subscribe('users')
   }
 
+  getStyles () {
+    return {
+      height: `calc(100% - ${APPBAR_HEIGHT}px)`,
+      paddingTop: `${APPBAR_HEIGHT}px`
+    }
+  }
+
   getChildContext () {
     return {
       muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
@@ -42,7 +49,7 @@ export default class Root extends React.Component {
             showMenuIconButton={ false }
             title='PEAK'
             />
-          <div style={{ paddingTop: `${APPBAR_HEIGHT}px` }}>
+          <div style={ this.getStyles() }>
             { this.props.children }
           </div>
         </AppCanvas>
