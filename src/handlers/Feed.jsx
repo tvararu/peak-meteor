@@ -114,8 +114,8 @@ class Feed extends Component {
 }
 
 const mapStateToProps = state => ({
-  posts: state.posts,
-  users: state.users
+  posts: [],
+  users: []
 })
 
 const mapDispatchToProps = {}

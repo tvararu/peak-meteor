@@ -42,7 +42,7 @@ export default class Root extends React.Component {
 
   render () {
     return <Provider store={ store }>
-      <div>
+      <div style={{ height: '100%' }}>
         <AppCanvas>
           <StyleReset />
           <AppBar
