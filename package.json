@@ -1,4 +1,23 @@
 {
+  "name": "peak-meteor",
+  "version": "1.0.0",
+  "description": "A social network, built in Meteor.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvararu/peak-meteor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tvararu/peak-meteor/issues"
+  },
+  "homepage": "https://github.com/tvararu/peak-meteor#readme",
   "standard": {
     "parser": "babel-eslint"
   }
