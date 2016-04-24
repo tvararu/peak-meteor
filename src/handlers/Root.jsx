@@ -26,11 +26,7 @@ export default class Root extends Component {
   render () {
     return <AppCanvas>
       <StyleReset />
-      <div style={{
-        height: '100%'
-      }}>
-        { this.props.children }
-      </div>
+      { this.props.children }
     </AppCanvas>
   }
 }
