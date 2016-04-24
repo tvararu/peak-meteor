@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import colors from 'lib/colors'
 import Radium from 'radium'
 import HeroHeader from 'components/HeroHeader/index'
 
@@ -16,9 +15,18 @@ class Home extends Component {
     return <div style={ this.getStyles() }>
       <HeroHeader />
       <div style={[{
-        height: '100vh'
+        maxWidth: '800px',
+        padding: '100px',
+        width: '100%'
       }]}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div style={[{
+          padding: '0 20px'
+        }]}>
+          <h2>What's this?</h2>
+          <p>PEAK is a brand new approach to hiring, currently in private beta.</p>
+          <p>Get headhunted by top companies or find talent for your startup.</p>
+          <p>Sign up today!</p>
+        </div>
       </div>
     </div>
   }
