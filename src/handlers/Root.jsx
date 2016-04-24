@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { AppCanvas, AppBar, Styles } from 'material-ui'
+import {
+  AppCanvas,
+  Styles
+} from 'material-ui'
 import PropTypes from 'lib/PropTypes'
 const { ThemeManager, LightRawTheme } = Styles
 
 import StyleReset from 'components/StyleReset'
-
-const APPBAR_HEIGHT = 64
 
 export default class Root extends Component {
   static propTypes = {
@@ -25,11 +26,9 @@ export default class Root extends Component {
   render () {
     return <AppCanvas>
       <StyleReset />
-      <AppBar
-        showMenuIconButton={ false }
-        title='PEAK'
-      />
-      <div style={{ paddingTop: `${APPBAR_HEIGHT}px` }}>
+      <div style={{
+        height: '100%'
+      }}>
         { this.props.children }
       </div>
     </AppCanvas>
