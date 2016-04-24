@@ -7,6 +7,7 @@ module.exports = {
     'meteor/Accounts': 'Accounts',
     'meteor/BlazeToReact': 'BlazeToReact',
     'meteor/check': 'check',
+    'meteor/ReactMeteorData': 'ReactMeteorData',
     'meteor/ReactRouterSSR': 'ReactRouterSSR',
     'meteor/WebpackStats': 'WebpackStats',
     'meteor': 'Meteor',

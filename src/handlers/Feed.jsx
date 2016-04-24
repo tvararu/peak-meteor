@@ -1,12 +1,26 @@
+import _ from 'lodash'
 import React, { Component } from 'react'
 import Meteor from 'meteor'
 import Radium from 'radium'
+import reactMixin from 'react-mixin'
+import ReactMeteorData from 'meteor/ReactMeteorData'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
 import { TransitionMotion, spring } from 'react-motion'
 import { Posts } from 'lib/collections'
 
+@reactMixin.decorate(ReactMeteorData)
 class Feed extends Component {
+  constructor (props) {
+    super(props)
+
+    _.bindAll(
+      this,
+      'willEnter',
+      'willLeave'
+    )
+  }
+
   getMeteorData () {
     Meteor.subscribe('posts')
     Meteor.subscribe('users')
@@ -62,8 +76,8 @@ class Feed extends Component {
   renderFeed () {
     return <TransitionMotion
       styles={ this.getMotionStyles() }
-      willEnter={ this.willEnter.bind(this) }
-      willLeave={ this.willLeave.bind(this) }
+      willEnter={ this.willEnter }
+      willLeave={ this.willLeave }
     >
       { interpolatedStyles => {
         const styleKeys = Object.keys(interpolatedStyles)

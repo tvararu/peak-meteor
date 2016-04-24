@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import Meteor from 'meteor'
 import React, { Component } from 'react'
 import Radium from 'radium'
@@ -12,6 +13,17 @@ class Composer extends Component {
   state = {
     content: ''
   };
+
+  constructor (props) {
+    super(props)
+
+    _.bindAll(
+      this,
+      'handleChange',
+      'handleEnterKey',
+      'submitPost'
+    )
+  }
 
   canSubmitPost () {
     return this.state.content.length !== 0
@@ -45,7 +57,7 @@ class Composer extends Component {
           floatingLabelText='Write a new post.'
           hintStyle={{ top: '13px' }}
           multiLine
-          onEnterKeyDown={ this.handleEnterKey.bind(this) }
+          onEnterKeyDown={ this.handleEnterKey }
           ref={ 'textField' }
           rows={ 2 }
           style={{ width: '100%' }}
@@ -54,7 +66,7 @@ class Composer extends Component {
         <RaisedButton
           disabled={ !this.canSubmitPost() }
           label='Post'
-          onClick={ this.submitPost.bind(this) }
+          onClick={ this.submitPost }
           primary
           style={{ float: 'right' }}
         />
