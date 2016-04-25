@@ -35,12 +35,12 @@ class Home extends Component {
       return <div style={ this.getStyles() }>
         <HeroHeader />
         <div style={{
+          minHeight: '100vh',
           maxWidth: '800px',
-          padding: '100px',
           width: '100%'
         }}>
           <div style={{
-            padding: '0 20px'
+            padding: '100px 20px'
           }}>
             <h2>What's this?</h2>
             <p>PEAK is a brand new approach to hiring, currently in private beta.</p>

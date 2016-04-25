@@ -1,9 +1,10 @@
 import _ from 'lodash'
-import React, { Component } from 'react'
 import Meteor from 'meteor'
+import React, { Component } from 'react'
 import Radium from 'radium'
 import reactMixin from 'react-mixin'
 import ReactMeteorData from 'meteor/ReactMeteorData'
+import Bar from 'components/Bar'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
 import { TransitionMotion, spring } from 'react-motion'
@@ -33,7 +34,9 @@ class Feed extends Component {
 
   getStyles () {
     return {
-      padding: '10px'
+      margin: '0 auto',
+      maxWidth: '600px',
+      padding: '0 10px 10px 10px'
     }
   }
 
@@ -110,6 +113,7 @@ class Feed extends Component {
 
   render () {
     return <div style={ this.getStyles() }>
+      <Bar />
       <div style={{ marginBottom: '10px' }}>
         <Composer />
       </div>
