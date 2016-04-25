@@ -5,10 +5,10 @@ import { Route, IndexRoute } from 'react-router'
 
 import Root from 'handlers/Root'
 import Home from 'handlers/Home'
-import Feed from 'handlers/Feed'
+import Profile from 'handlers/Profile'
 
 export default
   <Route path='/' component={ Root }>
     <IndexRoute component={ Home } />
-    <Route path='feed' component={ Feed } />
+    <Route path='profile' component={ Profile } />
   </Route>
