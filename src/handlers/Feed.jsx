@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 import reactMixin from 'react-mixin'
 import ReactMeteorData from 'meteor/ReactMeteorData'
-import Bar from 'components/Bar'
 import FeedItem from 'components/FeedItem'
 import Composer from 'components/Composer'
 import { TransitionMotion, spring } from 'react-motion'
@@ -23,9 +22,6 @@ class Feed extends Component {
   }
 
   getMeteorData () {
-    Meteor.subscribe('posts')
-    Meteor.subscribe('users')
-
     return {
       posts: Posts.find({}, { sort: { createdAt: -1 } }).fetch(),
       users: Meteor.users.find().fetch()
@@ -113,7 +109,6 @@ class Feed extends Component {
 
   render () {
     return <div style={ this.getStyles() }>
-      <Bar />
       <div style={{ marginBottom: '10px' }}>
         <Composer />
       </div>

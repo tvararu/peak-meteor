@@ -20,8 +20,6 @@ class Home extends Component {
   }
 
   getMeteorData () {
-    Meteor.subscribe('users')
-
     return {
       user: Meteor.user()
     }
