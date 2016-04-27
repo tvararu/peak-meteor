@@ -106,7 +106,7 @@ class Profile extends Component {
   }
 
   render () {
-    const email = 'theo@vararu.org'
+    const email = this.props.email
     const avatarUrl = gravatar.imageUrl(email)
     const valueLinkTitle = {
       value: this.state.title,
@@ -136,7 +136,7 @@ class Profile extends Component {
         <CardText style={{ clear: 'both' }}>
           <br />
           <TextField
-            hintText='Enter a brief description about yourself.'
+            hintText='A brief personal description.'
             multiLine={ true }
             valueLink={ valueLinkDescription }
           /><br />

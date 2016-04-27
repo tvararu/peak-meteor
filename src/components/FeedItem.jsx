@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import shouldPureComponentUpdate from 'react-pure-render'
 import gravatar from 'gravatar'
 import PropTypes from 'lib/PropTypes'
+import { Link } from 'react-router'
 import {
   Card,
   CardHeader,
@@ -39,7 +40,9 @@ export default class FeedItem extends Component {
             }}>{ this.props.createdAt.toLocaleString() }</span>
           </div>
         }
-        title={ email }
+        title={
+          <Link to={ `/profile/${author._id}` }>{ email }</Link>
+        }
       />
       <CardText>
         { this.props.text }

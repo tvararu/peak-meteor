@@ -6,5 +6,5 @@ Meteor.publish('posts', () =>
 )
 
 Meteor.publish('users', () =>
-  Meteor.users.find({}, { fields: { emails: 1 } })
+  Meteor.users.find({}, { fields: { emails: 1, profile: 1 } })
 )
