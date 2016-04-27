@@ -18,13 +18,27 @@ export default class FeedItem extends Component {
   shouldComponentUpdate = shouldPureComponentUpdate;
 
   render () {
-    const email = this.props.author.emails[0].address
+    const author = this.props.author
+    const email = author.emails[0].address
     const avatarUrl = gravatar.imageUrl(email)
+    let title = ''
+    if (author.profile && author.profile.title) {
+      title = author.profile.title
+    }
 
     return <Card>
       <CardHeader
         avatar={ avatarUrl }
-        subtitle={ this.props.createdAt.toLocaleString() }
+        subtitle={
+          <div>
+            { title }
+            <span style={{
+              position: 'absolute',
+              right: '16px',
+              top: '18px'
+            }}>{ this.props.createdAt.toLocaleString() }</span>
+          </div>
+        }
         title={ email }
       />
       <CardText>
