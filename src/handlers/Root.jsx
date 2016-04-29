@@ -26,18 +26,11 @@ export default class Root extends Component {
     Meteor.subscribe('posts')
     Meteor.subscribe('users')
 
-    const PEER_API_KEY = '55rcmc6w7jm50zfr'
-    const peer = new Peer({ key: PEER_API_KEY })
-
-    peer.on('open', (id) => {
-      const currentUser = Meteor.user()
-      if (currentUser) {
-        Meteor.users.update(
-          currentUser._id,
-          {$set: { 'profile.peerId': id }}
-        )
-      }
-    })
+    const currentUser = Meteor.user()
+    if (currentUser) {
+      const PEER_API_KEY = '55rcmc6w7jm50zfr'
+      window.peer = new Peer(currentUser._id, { key: PEER_API_KEY })
+    }
   }
 
   getChildContext () {
