@@ -27,7 +27,7 @@ export default class Root extends Component {
     Meteor.subscribe('users')
 
     const currentUser = Meteor.user()
-    if (currentUser) {
+    if (currentUser && typeof window !== 'undefined') {
       const PEER_API_KEY = '55rcmc6w7jm50zfr'
       window.peer = new Peer(currentUser._id, { key: PEER_API_KEY })
     }

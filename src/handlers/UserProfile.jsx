@@ -63,9 +63,11 @@ class UserProfile extends Component {
       'handleClick'
     )
 
-    window.peer.on('call', (call) => {
-      call.answer(this.state.stream)
-    })
+    if (typeof window !== 'undefined') {
+      window.peer.on('call', (call) => {
+        call.answer(this.state.stream)
+      })
+    }
   }
 
   getMeteorData () {
